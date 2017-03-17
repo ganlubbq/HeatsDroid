@@ -1,0 +1,1885 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>1</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>650</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>HEATS</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>751</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="general_TW">
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <attribute name="title">
+      <string>General</string>
+     </attribute>
+     <widget class="QLabel" name="gen_tiempo_L">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Señal:</string>
+      </property>
+     </widget>
+     <widget class="QScrollBar" name="gen_tiempo_despH_SB">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>240</y>
+        <width>681</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="tracking">
+       <bool>false</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QScrollBar" name="gen_tiempo_despV_SB">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>30</y>
+        <width>16</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="invertedControls">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QSlider" name="gen_tiempo_zoomH_SL">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>260</y>
+        <width>681</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QSlider" name="gen_tiempo_zoomV_SL">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>30</y>
+        <width>22</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="gen_tiempo_L_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>290</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Espectrograma:</string>
+      </property>
+     </widget>
+     <widget class="QScrollBar" name="gen_spect_despH_SB">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>520</y>
+        <width>681</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>0</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QSlider" name="gen_spect_zoomH_SL">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>540</y>
+        <width>681</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QScrollBar" name="gen_spect_despV_SB">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>310</y>
+        <width>16</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>0</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QSlider" name="gen_spect_zoomV_SL">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>310</y>
+        <width>22</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>681</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gen_graph_tiempo_GL"/>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>310</y>
+        <width>681</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gen_graph_spect_GL"/>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="detect_TW">
+     <attribute name="title">
+      <string>Detectar</string>
+     </attribute>
+     <widget class="QWidget" name="verticalLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>310</y>
+        <width>681</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="detect_graph_spect_VL"/>
+     </widget>
+     <widget class="QSlider" name="detect_spect_zoomV_SL">
+      <property name="geometry">
+       <rect>
+        <x>721</x>
+        <y>310</y>
+        <width>22</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QScrollBar" name="detect_spect_despH_SB">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>520</y>
+        <width>681</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>0</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QScrollBar" name="detect_spect_despV_SB">
+      <property name="geometry">
+       <rect>
+        <x>701</x>
+        <y>310</y>
+        <width>16</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>0</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QSlider" name="detect_spect_zoomH_SL">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>540</y>
+        <width>681</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="detect_fft_L">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>10</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Espectro:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="detect_fft_L_2">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>290</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Espectrograma:</string>
+      </property>
+     </widget>
+     <widget class="QSlider" name="detect_fft_zoomV_SL">
+      <property name="geometry">
+       <rect>
+        <x>721</x>
+        <y>30</y>
+        <width>22</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QSlider" name="detect_fft_zoomH_SL">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>260</y>
+        <width>681</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QGraphicsView" name="detect_graph_fft_GV">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>681</width>
+        <height>221</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="clasif_TW">
+     <attribute name="title">
+      <string>Estimación</string>
+     </attribute>
+     <widget class="QScrollBar" name="clasif_fft_despH_SB">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>530</y>
+        <width>261</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="tracking">
+       <bool>false</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="clasif_fft_L">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>300</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Espectro:</string>
+      </property>
+     </widget>
+     <widget class="QSlider" name="clasif_fft_zoomH_SL">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>550</y>
+        <width>261</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QSlider" name="clasif_fft_zoomV_SL">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>320</y>
+        <width>22</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>320</y>
+        <width>261</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="clasif_graph_fft_GL"/>
+     </widget>
+     <widget class="QScrollBar" name="clasif_fft_despV_SB">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>320</y>
+        <width>16</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="invertedControls">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QScrollBar" name="clasif_const_despV_SB">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>320</y>
+        <width>16</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="invertedControls">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QSlider" name="clasif_const_zoomV_SL">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>320</y>
+        <width>22</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QScrollBar" name="clasif_const_despH_SB">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>530</y>
+        <width>261</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="tracking">
+       <bool>false</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="clasif_const_L">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>300</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Constelación:</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget_7">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>320</y>
+        <width>261</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="clasif_graph_const_GL"/>
+     </widget>
+     <widget class="QSlider" name="clasif_const_zoomH_SL">
+      <property name="geometry">
+       <rect>
+        <x>399</x>
+        <y>550</y>
+        <width>261</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QSlider" name="clasif_spect_zoomV_SL">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>30</y>
+        <width>22</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="gen_tiempo_L_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Espectrograma:</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget_9">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>681</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="clasif_graph_spect_GL"/>
+     </widget>
+     <widget class="QScrollBar" name="clasif_spect_despV_SB">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>30</y>
+        <width>16</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>0</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QScrollBar" name="clasif_spect_despH_SB">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>240</y>
+        <width>681</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>0</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QSlider" name="clasif_spect_zoomH_SL">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>260</y>
+        <width>681</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="dem_TW">
+     <attribute name="title">
+      <string>Demodular</string>
+     </attribute>
+     <widget class="QScrollBar" name="dem_fft_despH_SB">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>530</y>
+        <width>261</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="tracking">
+       <bool>false</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QSlider" name="dem_fft_zoomH_SL">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>550</y>
+        <width>261</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QScrollBar" name="dem_fft_despV_SB">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>320</y>
+        <width>16</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="invertedControls">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>320</y>
+        <width>261</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="dem_graph_fft_GL"/>
+     </widget>
+     <widget class="QSlider" name="dem_fft_zoomV_SL">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>320</y>
+        <width>22</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="dem_fft_L">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>300</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Espectro:</string>
+      </property>
+     </widget>
+     <widget class="QScrollBar" name="dem_tiempo_despV_SB">
+      <property name="geometry">
+       <rect>
+        <x>701</x>
+        <y>30</y>
+        <width>16</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="invertedControls">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>30</y>
+        <width>681</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="dem_graph_tiempo_GL"/>
+     </widget>
+     <widget class="QLabel" name="dem_tiempo_L">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>10</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Señal:</string>
+      </property>
+     </widget>
+     <widget class="QScrollBar" name="dem_tiempo_despH_SB">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>240</y>
+        <width>681</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="tracking">
+       <bool>false</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QSlider" name="dem_tiempo_zoomV_SL">
+      <property name="geometry">
+       <rect>
+        <x>721</x>
+        <y>30</y>
+        <width>22</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QSlider" name="dem_tiempo_zoomH_SL">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>260</y>
+        <width>681</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget_8">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>320</y>
+        <width>261</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="dem_raster_GL"/>
+     </widget>
+     <widget class="QSlider" name="dem_raster_zoomH_SL">
+      <property name="geometry">
+       <rect>
+        <x>379</x>
+        <y>550</y>
+        <width>261</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="dem_raster_L">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>300</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Raster:</string>
+      </property>
+     </widget>
+     <widget class="QScrollBar" name="dem_raster_despH_SB">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>530</y>
+        <width>261</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="tracking">
+       <bool>false</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QSlider" name="dem_raster_zoomV_SL">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>320</y>
+        <width>22</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QScrollBar" name="dem_raster_despV_SB">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>320</y>
+        <width>16</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="invertedControls">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QToolBox" name="toolBox">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>30</y>
+      <width>221</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>3</number>
+    </property>
+    <widget class="QWidget" name="param_TB">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>221</width>
+       <height>413</height>
+      </rect>
+     </property>
+     <attribute name="label">
+      <string>Parámetros:</string>
+     </attribute>
+     <widget class="QGroupBox" name="gen_spect_GB">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>170</y>
+        <width>221</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Espectrograma</string>
+      </property>
+      <widget class="QSpinBox" name="spect_window_length_SpinB">
+       <property name="geometry">
+        <rect>
+         <x>191</x>
+         <y>30</y>
+         <width>20</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>3</number>
+       </property>
+       <property name="maximum">
+        <number>15</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="gen_spect_long_vent_L">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Longitud de ventana:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="spect_window_length_LE">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>30</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string extracomment="potencia de 2"/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="spect_PB">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>180</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Espectro</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="spect_solap_SpinB">
+       <property name="geometry">
+        <rect>
+         <x>191</x>
+         <y>70</y>
+         <width>20</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>5000</number>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="spect_window_solap_LE">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>70</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string extracomment="potencia de 2"/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="gen_spect_solap_L">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Solapamiento [%]:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="gen_spect_vent_L">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Ventana:</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="spect_window_CB">
+       <property name="geometry">
+        <rect>
+         <x>78</x>
+         <y>110</y>
+         <width>131</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="spect_color">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>150</y>
+         <width>91</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Escala RGB</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="gen_inf_GB">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>221</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Información</string>
+      </property>
+      <widget class="QLabel" name="param_signal_name">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>201</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Archivo:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="param_fm_L">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>201</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Frecuencia de muestreo [Hz]:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="param_signal_duracion">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>201</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Duración [hh:mm:ss]:</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="detect_TB">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>221</width>
+       <height>413</height>
+      </rect>
+     </property>
+     <attribute name="label">
+      <string>Detectar</string>
+     </attribute>
+     <widget class="QGroupBox" name="detect_filtro_GB">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>200</y>
+        <width>221</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Filtrado</string>
+      </property>
+      <widget class="QLabel" name="detect_f0_L">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>61</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Centro [Hz]:</string>
+       </property>
+      </widget>
+      <widget class="QScrollBar" name="detect_f0_SB">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>201</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>0</number>
+       </property>
+       <property name="maximum">
+        <number>99</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="detect_f1_L">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>61</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Banda [Hz]:</string>
+       </property>
+      </widget>
+      <widget class="QScrollBar" name="detect_f1_SB">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>120</y>
+         <width>201</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="detect_f0_LE">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>30</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="detect_f1_LE">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>90</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="detect_filter_PB">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>150</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Filtrar</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="detect_SS_GB">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>221</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Sensado de Espectro</string>
+      </property>
+      <widget class="QLabel" name="detect_L1">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Método:</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="detect_met_CB">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>30</y>
+         <width>151</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="detect_PB">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Detectar</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="detect_L2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>130</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Señales:</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="detect_signals_CB">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>130</y>
+         <width>151</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="clasif_TB">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>221</width>
+       <height>413</height>
+      </rect>
+     </property>
+     <attribute name="label">
+      <string>Estimación</string>
+     </attribute>
+     <widget class="QGroupBox" name="clasif_mod_GB">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>180</y>
+        <width>221</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Modulación</string>
+      </property>
+      <widget class="QLabel" name="clasif_met_L">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Método:</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="clasif_metodos_CB">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>30</y>
+         <width>151</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="editable">
+        <bool>false</bool>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+      </widget>
+      <widget class="QPushButton" name="clasif_PB">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Clasificar</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="clasif_resultado_CB">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>110</y>
+         <width>111</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="clasif_L2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Modulación:</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="clasif_const_CB">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>150</y>
+         <width>111</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Lazo Cuadrático</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Lazo de Costas</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="clasif_L3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>150</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Constelación:</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="clasif_const_lines">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>190</y>
+         <width>91</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Mostrar líneas</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="clasif_param_GB">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>221</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Parámetros</string>
+      </property>
+      <widget class="QLineEdit" name="param_baud_LE">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>110</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string extracomment="baud rate"/>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="param_baud_rate_L">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Baud rate [Hz]:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="param_amp_LE">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>30</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="param_amp_L">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Amplitud [V]:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="param_SNR_LE">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>70</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="param_SNR_L">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>SNR [dB]:</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="dem_TB">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>221</width>
+       <height>413</height>
+      </rect>
+     </property>
+     <attribute name="label">
+      <string>Demodular</string>
+     </attribute>
+     <widget class="QLabel" name="dem_L">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Métodos:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="dem_metodos_CB">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>10</y>
+        <width>171</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="dem_PB">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>50</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Demodular</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="dem_freq_GB">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>80</y>
+        <width>221</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Frecuencia</string>
+      </property>
+      <widget class="QLabel" name="dem_f0_L">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>f0 [Hz]:</string>
+       </property>
+      </widget>
+      <widget class="QScrollBar" name="dem_f0_SB">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>201</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="dem_f1_L">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>f1 [Hz]:</string>
+       </property>
+      </widget>
+      <widget class="QScrollBar" name="dem_f1_SB">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>120</y>
+         <width>201</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="dem_f0_LE">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>30</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="dem_f1_LE">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>90</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="dem_freq_CB">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>10</y>
+         <width>101</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="dem_freq_L">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>61</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>frecuencia:</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="dem_raster_GB">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>240</y>
+        <width>221</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Raster</string>
+      </property>
+      <widget class="QLabel" name="dem_raster_L_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>36</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Patrón:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="dem_raster_L_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>47</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Patrones:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="dem_raster_LE">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>30</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::LogicalMoveStyle</enum>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="dem_raster_CB">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>70</y>
+         <width>111</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dem_exportar_PB">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>140</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Exportar</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="dem_cod_L">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Código:</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="dem_cod_CB">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>110</y>
+         <width>111</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="info_L">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>560</y>
+      <width>221</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Información: </string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <addaction name="actionAbrir"/>
+    <addaction name="separator"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+  <action name="actionAbrir">
+   <property name="text">
+    <string>Abrir</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
